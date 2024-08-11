@@ -1,3 +1,5 @@
+package org.example;
+
 import java.sql.*;
 
 public class ItemManager {
@@ -11,7 +13,7 @@ public class ItemManager {
 
 
 
-    public void InsertItem(String itemName, String itemCode){
+    public void InsertItem(Item item) throws SQLException {
         // insert into DB the store (code,name)
         try (PreparedStatement stmt = connection.prepareStatement("INSERT into items (name, code) VALUES (?,?)")) {
 
@@ -19,8 +21,8 @@ public class ItemManager {
 
 
 
-            stmt.setString(1,itemName );
-            stmt.setString(2, itemCode);
+            stmt.setString(1,item.getItemName() );
+            stmt.setString(2, item.getItemCode());
             stmt.executeUpdate();
 
             System.out.println("DONE!");

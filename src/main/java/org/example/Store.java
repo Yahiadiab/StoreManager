@@ -1,3 +1,5 @@
+package org.example;
+
 public class Store {
     private String storeCode;
     private String storeName;
@@ -8,6 +10,11 @@ public class Store {
         this.storeName = storeName;
 
     }
+
+    public Store() {
+
+    }
+
     public String getStoreCode() {
         return storeCode;
     }

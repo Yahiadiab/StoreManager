@@ -1,3 +1,5 @@
+package org.example;
+
 public class Item {
     private String itemCode;
     private String itemName;
@@ -10,12 +12,16 @@ public class Item {
 
     }
 
+    public Item() {
+
+    }
+
 
     public String getItemCode() {
         return itemCode;
     }
 
-    public void setItemCode(String itemCode) {
+    public void setItemCode(String selectitemCode) {
         this.itemCode = itemCode;
     }
 
